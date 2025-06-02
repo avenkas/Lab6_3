@@ -1,0 +1,77 @@
+<!DOCTYPE html>  <!-- Визначаємо, що це документ HTML5 -->
+<html lang="uk">  <!-- Встановлюємо українську мову для сторінки -->
+<head>
+    <meta charset="UTF-8">  <!-- Вказуємо кодування UTF-8 для коректного відображення українських символів -->
+    <title>Форма реєстрації</title>  <!-- Заголовок сторінки, який буде видно у вкладці браузера -->
+
+    <style>
+        /* Основні стилі для сторінки */
+        body {
+            font-family: Arial, sans-serif; /* Встановлюємо шрифт */
+            max-width: 400px; /* Обмежуємо максимальну ширину форми */
+            margin: auto; /* Центруємо форму */
+        }
+
+        /* Стилі для полів вводу */
+        input {
+            display: block; /* Кожен елемент розміщується на новому рядку */
+            margin-bottom: 10px; /* Відступ між полями */
+            width: 100%; /* Робимо поля шириною 100% контейнера */
+            padding: 8px; /* Додаємо внутрішні відступи */
+        }
+
+        /* Стилі для повідомлень про помилки */
+        .error {
+            color: red; /* Червоний колір для тексту помилки */
+            font-size: 14px; /* Зменшуємо розмір тексту */
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Форма реєстрації</h2>  <!-- Заголовок сторінки -->
+    
+    <!-- Форма для введення інформації -->
+    <form id="registrationForm">
+        <!-- Поле для імені -->
+        <label for="firstName">Ім'я:</label>
+        <input type="text" id="firstName" name="firstName" required>
+        <span class="error" id="firstNameError"></span> <!-- Повідомлення про помилки -->
+
+        <!-- Поле для прізвища -->
+        <label for="lastName">Прізвище:</label>
+        <input type="text" id="lastName" name="lastName" required>
+
+        <!-- Поле для адреси -->
+        <label for="address">Адреса:</label>
+        <input type="text" id="address" name="address" required>
+
+        <!-- Поле для міста -->
+        <label for="city">Місто:</label>
+        <input type="text" id="city" name="city" required>
+
+        <!-- Поле для країни -->
+        <label for="country">Країна:</label>
+        <input type="text" id="country" name="country" required>
+
+        <!-- Поле для поштового індексу -->
+        <label for="postalCode">Поштовий індекс:</label>
+        <input type="text" id="postalCode" name="postalCode" required>
+
+        <!-- Поле для номера телефону -->
+        <label for="phone">Телефон:</label>
+        <input type="text" id="phone" name="phone" required>
+
+        <!-- Поле для електронної пошти -->
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+
+        <!-- Кнопка для надсилання форми -->
+        <button type="submit">Надіслати</button>
+    </form>
+
+    <!-- Підключення зовнішнього JavaScript-файлу, який перевіряє дані -->
+    <script src="lab6_3.js"></script>
+
+</body>
+</html>
